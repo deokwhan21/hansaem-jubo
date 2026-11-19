@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>한샘교회 주일주보 | 2026년 11월 15일</title>
+  <meta property="og:title" content="한샘교회 주일주보 (2026.11.15)" />
+  <meta property="og:description" content="성령강림 후 스물다섯 번째 주일 · 추수감사주일 | 말씀: 은혜의 강물이 흐르게 하소서 (고후 8:13-15)" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --card: #ffffff;
+      --primary: #1f3a5f;
+      --primary-light: #eef3f8;
+      --accent: #b07d3c;
+      --accent-soft: #faf4ea;
+      --text: #22252a;
+      --muted: #666c75;
+      --border: #e5e1d8;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 48px;
+    }
+
+    /* Header */
+    .hero {
+      background: linear-gradient(135deg, #1a3152 0%, #274976 100%);
+      color: #fff;
+      padding: 28px 20px 24px;
+      text-align: center;
+    }
+
+    .hero .church-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      background: rgba(255, 255, 255, 0.14);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .hero .meta {
+      font-size: 0.92rem;
+      opacity: 0.9;
+    }
+
+    .hero .motto {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.88rem;
+      opacity: 0.92;
+    }
+
+    /* Sticky Nav */
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .nav-wrap::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-start;
+      gap: 6px;
+      padding: 10px 14px;
+      max-width: 640px;
+      margin: 0 auto;
+      white-space: nowrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #f2f0ea;
+      transition: all 0.15s ease;
+    }
+
+    .nav a:hover,
+    .nav a:active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 16px 14px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      scroll-margin-top: 60px;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    .card-sub {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    /* Worship Order */
+    .worship-verse {
+      background: var(--primary-light);
+      border-radius: 10px;
+      padding: 11px 14px;
+      font-size: 0.88rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .order-list {
+      list-style: none;
+    }
+
+    .order-item {
+      display: grid;
+      grid-template-columns: 92px 1fr auto;
+      align-items: baseline;
+      gap: 8px;
+      padding: 9px 4px;
+      border-bottom: 1px dashed #ebe7de;
+      font-size: 0.96rem;
+    }
+
+    .order-item:last-child {
+      border-bottom: none;
+    }
+
+    .order-label {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .order-label.stand::before {
+      content: "*";
+      color: var(--accent);
+      margin-right: 2px;
+    }
+
+    .order-detail {
+      color: var(--text);
+    }
+
+    .order-detail.sermon {
+      font-weight: 700;
+      color: #162a45;
+      font-size: 1.02rem;
+    }
+
+    .order-who {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .stand-note {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--accent);
+      text-align: right;
+    }
+
+    /* Pastoral Letter */
+    .letter-box {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .letter-heading {
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #6b4719;
+      margin-bottom: 8px;
+    }
+
+    .letter-box p {
+      font-size: 0.95rem;
+      color: #362f26;
+      word-break: keep-all;
+    }
+
+    /* News List */
+    .news-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 10px;
+      font-size: 0.95rem;
+      word-break: keep-all;
+    }
+
+    .news-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .news-sub {
+      margin-top: 4px;
+      font-size: 0.87rem;
+      color: var(--muted);
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    th, td {
+      padding: 8px 6px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    tr.today-row {
+      background: var(--accent-soft);
+      font-weight: 600;
+    }
+
+    /* Prayer & Meditation */
+    .prayer-group {
+      margin-bottom: 12px;
+    }
+
+    .prayer-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .prayer-title {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .prayer-text {
+      font-size: 0.9rem;
+      color: var(--text);
+      word-break: keep-all;
+    }
+
+    .mission-box {
+      margin-top: 8px;
+      background: #f9f8f4;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Account Box */
+    .account-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--primary-light);
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .account-info {
+      font-size: 0.88rem;
+    }
+
+    .account-num {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--primary);
+    }
+
+    .copy-btn {
+      flex-shrink: 0;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .copy-btn:active {
+      opacity: 0.85;
+    }
+
+    /* Info Grid */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 0.88rem;
+    }
+
+    .info-box {
+      background: #f9f8f4;
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .info-box h3 {
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 24px 16px 8px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .footer a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="church-badge">기독교대한성결교회 한샘교회 · 설립 1987.8.9.</div>
+    <h1>2026년 11월 15일 주일주보</h1>
+    <div class="meta">제40-46호 · 성령강림 후 스물다섯 번째 주일 (추수감사주일)</div>
+    <div class="motto">
+      “하나님을 사랑하고 이웃을 사랑하라” (눅 10:27)<br />
+      New Acts 40 (행 1:8) 신사도행전을 펼쳐가는 교회
+    </div>
+  </header>
+
+  <nav class="nav-wrap" aria-label="주보 바로가기">
+    <div class="nav">
+      <a href="#worship">예배순서</a>
+      <a href="#letter">목회서신</a>
+      <a href="#news">교회소식</a>
+      <a href="#schedule">기도·묵상</a>
+      <a href="#offering">예물·봉사</a>
+      <a href="#info">예배안내</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- 1. 주일예배 순서 -->
+    <section id="worship" class="card">
+      <div class="card-title">
+        <span>주일예배 순서</span>
+        <span class="card-sub">오전 11:00 · 인도 오덕환 목사</span>
+      </div>
+
+      <div class="worship-verse">
+        “하나님은 영이시니 예배하는 자는 영과 진리로 예배할지니라” (요 4:24)
+      </div>
+
+      <ul class="order-list">
+        <li class="order-item">
+          <span class="order-label">찬양</span>
+          <span class="order-detail"></span>
+          <span class="order-who">다 같이</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">예배의 부름</span>
+          <span class="order-detail">행 2:46-47</span>
+          <span class="order-who">인도자</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label stand">찬송</span>
+          <span class="order-detail">찬송 25장</span>
+          <span class="order-who">다 같이</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label stand">신앙고백</span>
+          <span class="order-detail">사도신경</span>
+          <span class="order-who">다 같이</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label stand">성시교독</span>
+          <span class="order-detail">106. 감사절(2)</span>
+          <span class="order-who">다 같이</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">찬송</span>
+          <span class="order-detail">찬송 587장</span>
+          <span class="order-who">다 같이</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">기도</span>
+          <span class="order-detail"></span>
+          <span class="order-who">박양호 장로</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">봉헌</span>
+          <span class="order-detail">찬송 590장</span>
+          <span class="order-who">다 같이</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">교회소식</span>
+          <span class="order-detail"></span>
+          <span class="order-who">인도자</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">성경봉독</span>
+          <span class="order-detail">고후 8:13-15</span>
+          <span class="order-who">인도자</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">말씀선포</span>
+          <span class="order-detail sermon">은혜의 강물이 흐르게 하소서</span>
+          <span class="order-who">오덕환 목사</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">찬송</span>
+          <span class="order-detail">찬송 593장</span>
+          <span class="order-who">다 같이</span>
+        </li>
+        <li class="order-item">
+          <span class="order-label">축도</span>
+          <span class="order-detail"></span>
+          <span class="order-who">오덕환 목사</span>
+        </li>
+      </ul>
+
+      <div class="stand-note">* 표는 일어나시기 바랍니다</div>
+    </section>
+
+    <!-- 2. 목회서신 -->
+    <section id="letter" class="card">
+      <div class="card-title">
+        <span>행복한 만남이 있는 우물가</span>
+        <span class="card-sub">목회서신</span>
+      </div>
+      <div class="letter-box">
+        <div class="letter-heading">은혜는 흘러갈 때 더 깊어집니다!</div>
+        <p>
+          하나님께서 우리에게 주신 은혜는 나만 누리라고 맡기신 것이 아니라, 도움이 필요한 이웃에게 흘려보내라고 주신 선물입니다. 우리가 받은 것을 기쁨으로 나눌 때 물질만 움직이는 것이 아니라 사랑이 흐르고, 위로가 전해지고, 감사가 다시 하나님께 올라갑니다. 이번 추수감사절에는 내가 얼마나 많이 받았는지를 세는 데서 머물지 않고, 그 은혜가 누구에게 흘러가야 할지를 함께 생각하는 성도가 되기를 바랍니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. 교회소식 -->
+    <section id="news" class="card">
+      <div class="card-title">
+        <span>교회소식</span>
+        <span class="card-sub">2026.11.15.</span>
+      </div>
+      <ol class="news-list">
+        <li class="news-item">
+          <span class="news-num">1</span>
+          <div>오늘 예배에 나오신 모든 분들을 주님의 이름으로 환영하고 축복합니다.</div>
+        </li>
+        <li class="news-item">
+          <span class="news-num">2</span>
+          <div>
+            오늘은 추수감사예배로 드립니다. 한 해 동안 하나님께서 베풀어주신 은혜에 감사하며 영광을 올려드립니다. 강대상 장식과 나눔을 위해 헌물하신 것으로 20여 가정의 이웃들과 나누겠습니다. (한부모/탈북민/장애인가정 등)
+            <div class="news-sub">· 애찬 후에 윷놀이대회를 남전도회 주관으로 진행합니다.</div>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-num">3</span>
+          <div>
+            VIP 초청 ‘구주의 사랑!’ : 10.25-12.24 두 달간(9주)
+            <div class="news-sub">· 3주(장기결석성도 심방 및 초청) → 3주(태신자 초청) → 3주(지역이웃 전도)</div>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-num">4</span>
+          <div>교회학교 가을소풍 : 11월 21일(토) 오전 10시 교회 출발, 범바위포레스트(김포)</div>
+        </li>
+        <li class="news-item">
+          <span class="news-num">5</span>
+          <div>
+            다니엘기도회 : 11월 1~21일 오후 8-10시
+            <div class="news-sub">· 예배당에서, 각 가정에서 은혜를 사모함으로 참여하시기 바랍니다.</div>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-num">6</span>
+          <div>교회김장 : 11월 28일(토)</div>
+        </li>
+        <li class="news-item">
+          <span class="news-num">7</span>
+          <div>담임목사 동정 : 소사시흥감찰 목회자 MT 참석, 11.15(주일)-17(화), 강원 평창</div>
+        </li>
+        <li class="news-item">
+          <span class="news-num">8</span>
+          <div>애찬제공 : 김형례(생일)</div>
+        </li>
+      </ol>
+      <div class="mission-box" style="margin-top: 14px;">
+        <strong>소그룹 모임 (오후 1:00)</strong> : 매월 첫주, 셋째주에 모입니다. (11월엔 둘째, 넷째주에)
+      </div>
+    </section>
+
+    <!-- 4. 다니엘기도회 · 새벽기도회 · 매일묵상 -->
+    <section id="schedule" class="card">
+      <div class="card-title">
+        <span>다니엘기도회 · 매일묵상</span>
+        <span class="card-sub">11.15(주일)~21(토)</span>
+      </div>
+
+      <p style="font-size:0.9rem; margin-bottom:10px;">
+        <strong>새벽기도회</strong> (월~금 오전 6:00) · 인도: 이진용(월), 오덕환(수~금)<br />
+        <span style="color:var(--muted); font-size:0.86rem;">베드로후서 강해 / 다니엘 통독</span>
+      </p>
+
+      <div class="table-wrap" style="margin-bottom:16px;">
+        <table>
+          <thead>
+            <tr>
+              <th>날짜</th>
+              <th>다니엘기도회 (오후 8:00)</th>
+              <th>매일묵상</th>
+              <th>성경통독</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="today-row">
+              <td>15(주)</td>
+              <td>최기수 목사 / 하이프레이즈</td>
+              <td>주일본문</td>
+              <td>겔38-39, 요13, 시19</td>
+            </tr>
+            <tr>
+              <td>16(월)</td>
+              <td>이도열 전도사 / 아이자야</td>
+              <td>벧후 3장</td>
+              <td>겔40, 요14, 시20</td>
+            </tr>
+            <tr>
+              <td>17(화)</td>
+              <td>김재곤 장로 / 워비스</td>
+              <td>단 1-3장</td>
+              <td>겔41-43, 요15, 시21</td>
+            </tr>
+            <tr>
+              <td>18(수)</td>
+              <td>최유라 전도사 / 아이빅</td>
+              <td>단 4-6장</td>
+              <td>겔44-45, 요16, 시22</td>
+            </tr>
+            <tr>
+              <td>19(목)</td>
+              <td>정주호 대표 / 프레전스</td>
+              <td>단 7-9장</td>
+              <td>겔46-47, 요17, 시23</td>
+            </tr>
+            <tr>
+              <td>20(금)</td>
+              <td>가나자와 목사 / 디아코니아</td>
+              <td>단 10-12장</td>
+              <td>겔48, 요18-19, 시24</td>
+            </tr>
+            <tr>
+              <td>21(토)</td>
+              <td>간증의 밤 / 다니엘워십</td>
+              <td>자연묵상</td>
+              <td>단1, 요20-21, 시25</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prayer-group">
+        <div class="prayer-title">공동기도제목</div>
+        <div class="prayer-text">
+          · 열방과 우리나라를 위해 : 한반도의 평화와 통일, 지도자들을 위해<br />
+          · 교회를 위해 : 전도와 부흥, 소그룹 모임의 활성화<br />
+          · 선교사님들의 가정과 사역을 위해, 지원하는 단체의 사역을 위해<br />
+          · 북한에 억류된 한국선교사를 위해 (김국기, 김정욱, 최춘길, 김원호, 고현철, 함진우)
+        </div>
+        <div class="mission-box">
+          인도-이성희/심미정 · 미얀마-김동욱/김지혜 · 태국-임진형/김선하 · C국-대성교회(한호) · 인도네시아-전**/신** · 오만-이상빈/김미 · 세계모든종족선교회-조장연 · 서울신학대학교 · (사)북한이탈주민사랑협의회(북,러,몽) · 범안종합사회복지관 · 우리나래지역아동센터
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 예배와 봉사위원 & 향기로운 예물 -->
+    <section id="offering" class="card">
+      <div class="card-title">
+        <span>향기로운 예물 · 봉사위원</span>
+        <span class="card-sub">11월</span>
+      </div>
+
+      <div class="account-box">
+        <div class="account-info">
+          <div style="font-size:0.8rem; color:var(--muted);">온라인 헌금계좌 (기업은행 · 기독교대한성결교회 한샘교회)</div>
+          <div class="account-num" id="acctNum">276-072015-04-025</div>
+        </div>
+        <button class="copy-btn" onclick="copyAcct()">계좌복사</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>날짜</th>
+              <th>주일예배 기도</th>
+              <th>헌금위원</th>
+              <th>애찬제공</th>
+              <th>식사봉사</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1일</td>
+              <td>최용찬 안수집사</td>
+              <td rowspan="5" style="vertical-align: middle; text-align: center;">여전도회</td>
+              <td>곽장한</td>
+              <td>소사/역곡</td>
+            </tr>
+            <tr>
+              <td>8일</td>
+              <td>이원훈 안수집사</td>
+              <td>이용연</td>
+              <td>송내/원미</td>
+            </tr>
+            <tr class="today-row">
+              <td>15일</td>
+              <td>박양호 장로</td>
+              <td>김형례</td>
+              <td>옥길/범박</td>
+            </tr>
+            <tr>
+              <td>22일</td>
+              <td>명준호 안수집사</td>
+              <td>이원훈/정영옥</td>
+              <td>시흥/괴안</td>
+            </tr>
+            <tr>
+              <td>29일</td>
+              <td>곽장한 집사</td>
+              <td>김인자</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. 예배안내 및 교회소개 -->
+    <section id="info" class="card">
+      <div class="card-title">
+        <span>예배안내 · 섬기는 이들</span>
+      </div>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>주일 예배</h3>
+          주일예배 오전 11:00<br />
+          교회학교 오전 11:00<br />
+          청년회 오후 1:00<br />
+          어와나 오후 1:00
+        </div>
+        <div class="info-box">
+          <h3>주중 예배</h3>
+          수요예배 오후 7:30<br />
+          금요기도회 오후 8:30<br />
+          새벽기도회(월~금) 오전 6:00
+        </div>
+        <div class="info-box">
+          <h3>섬기는 이들</h3>
+          담임목사: 오덕환<br />
+          장로: 박양호(시무)<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이용연(명예)
+        </div>
+        <div class="info-box">
+          <h3>오시는 길</h3>
+          경기 부천시 양지로 40번길 17, 4층<br />
+          버스: 범박휴먼시아 1단지 정문 (25, 57-1, 60)<br />
+          ☎ 032-347-0501
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    기독교대한성결교회 한샘교회 · <a href="https://hansaemchurch.org" target="_blank" rel="noopener">hansaemchurch.org</a>
+  </footer>
+
+  <script>
+    function copyAcct() {
+      const text = "276-072015-04-025";
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector(".copy-btn");
+        btn.textContent = "복사됨!";
+        setTimeout(() => (btn.textContent = "계좌복사"), 1800);
+      });
+    }
+  </script>
+</body>
+</html>
