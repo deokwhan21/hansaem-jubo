@@ -222,6 +222,19 @@
       text-align: right;
     }
 
+    .hymn-link {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+
+    .hymn-link::after {
+      content: " ↗";
+      font-size: 0.78em;
+      color: var(--accent);
+    }
+
     /* Pastoral Letter */
     .letter-box {
       background: var(--accent-soft);
@@ -337,7 +350,18 @@
       padding: 10px 12px;
       font-size: 0.84rem;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.75;
+    }
+
+    .mission-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px 12px;
+    }
+
+    .mission-item {
+      display: inline-block;
+      white-space: nowrap;
     }
 
     /* Account Box */
@@ -461,7 +485,7 @@
         </li>
         <li class="order-item">
           <span class="order-label stand">찬송</span>
-          <span class="order-detail">찬송 25장</span>
+          <span class="order-detail"><a class="hymn-link" href="https://risen.runean.com/entry/%EC%83%88%EC%B0%AC%EC%86%A1%EA%B0%80-25%EC%9E%A5-%EB%A9%B4%EB%A5%98%EA%B4%80-%EB%B2%97%EC%96%B4%EC%84%9C-%EA%B0%80%EC%82%AC%EC%95%85%EB%B3%B4NWC" target="_blank" rel="noopener">찬송 25장</a></span>
           <span class="order-who">다 같이</span>
         </li>
         <li class="order-item">
@@ -476,7 +500,7 @@
         </li>
         <li class="order-item">
           <span class="order-label">찬송</span>
-          <span class="order-detail">찬송 587장</span>
+          <span class="order-detail"><a class="hymn-link" href="https://yoolessonge.tistory.com/entry/%EC%83%88%EC%B0%AC%EC%86%A1%EA%B0%80-587%EC%9E%A5-%ED%86%B5306-%EA%B0%90%EC%82%AC%ED%95%98%EB%8A%94-%EC%84%B1%EB%8F%84%EC%97%AC-%EC%B0%AC%EC%86%A1%EA%B0%80-%EC%95%85%EB%B3%B4-%EA%B0%80%EC%82%AC-ppt" target="_blank" rel="noopener">찬송 587장</a></span>
           <span class="order-who">다 같이</span>
         </li>
         <li class="order-item">
@@ -486,7 +510,7 @@
         </li>
         <li class="order-item">
           <span class="order-label">봉헌</span>
-          <span class="order-detail">찬송 590장</span>
+          <span class="order-detail"><a class="hymn-link" href="https://yoolessonge.tistory.com/entry/%EC%83%88%EC%B0%AC%EC%86%A1%EA%B0%80-590%EC%9E%A5-%ED%86%B5309-%EB%85%BC%EB%B0%AD%EC%97%90-%EC%98%A4%EA%B3%A1%EB%B0%B1%EA%B3%BC-%EC%B0%AC%EC%86%A1%EA%B0%80-%EC%95%85%EB%B3%B4-%EA%B0%80%EC%82%AC-ppt" target="_blank" rel="noopener">찬송 590장</a></span>
           <span class="order-who">다 같이</span>
         </li>
         <li class="order-item">
@@ -506,7 +530,7 @@
         </li>
         <li class="order-item">
           <span class="order-label">찬송</span>
-          <span class="order-detail">찬송 593장</span>
+          <span class="order-detail"><a class="hymn-link" href="https://yoolessonge.tistory.com/entry/%EC%83%88%EC%B0%AC%EC%86%A1%EA%B0%80-593%EC%9E%A5-%ED%86%B5312-%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4-%ED%95%98%EB%8A%98%EA%B3%BC-%EC%B0%AC%EC%86%A1%EA%B0%80-%EC%95%85%EB%B3%B4-%EA%B0%80%EC%82%AC-ppt" target="_blank" rel="noopener">찬송 593장</a></span>
           <span class="order-who">다 같이</span>
         </li>
         <li class="order-item">
@@ -662,10 +686,15 @@
           · 열방과 우리나라를 위해 : 한반도의 평화와 통일, 지도자들을 위해<br />
           · 교회를 위해 : 전도와 부흥, 소그룹 모임의 활성화<br />
           · 선교사님들의 가정과 사역을 위해, 지원하는 단체의 사역을 위해<br />
-          · 북한에 억류된 한국선교사를 위해 (김국기, 김정욱, 최춘길, 김원호, 고현철, 함진우)
+          · 북한에 억류된 한국선교사를 위해 (<span class="mission-item">김국기, 김정욱, 최춘길,</span> <span class="mission-item">김원호, 고현철, 함진우</span>)
         </div>
         <div class="mission-box">
-          인도-이성희/심미정 · 미얀마-김동욱/김지혜 · 태국-임진형/김선하 · C국-대성교회(한호) · 인도네시아-전**/신** · 오만-이상빈/김미 · 세계모든종족선교회-조장연 · 서울신학대학교 · (사)북한이탈주민사랑협의회(북,러,몽) · 범안종합사회복지관 · 우리나래지역아동센터
+          <div class="mission-row"><span class="mission-item">인도-이성희/심미정</span><span class="mission-item">미얀마-김동욱/김지혜</span></div>
+          <div class="mission-row"><span class="mission-item">태국-임진형/김선하</span><span class="mission-item">C국-대성교회(한호)</span></div>
+          <div class="mission-row"><span class="mission-item">인도네시아-전**/신**</span><span class="mission-item">오만-이상빈/김미</span></div>
+          <div class="mission-row"><span class="mission-item">세계모든종족선교회-조장연</span><span class="mission-item">서울신학대학교</span></div>
+          <div class="mission-row"><span class="mission-item">(사)북한이탈주민사랑협의회(북,러,몽)</span><span class="mission-item">범안종합사회복지관</span></div>
+          <div class="mission-row"><span class="mission-item">우리나래지역아동센터</span></div>
         </div>
       </div>
     </section>
