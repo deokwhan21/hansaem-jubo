@@ -222,17 +222,21 @@
       text-align: right;
     }
 
-    .hymn-link {
+    .hymn-btn {
+      background: var(--primary-light);
       color: var(--primary);
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      border: 1px solid #d4dfec;
+      border-radius: 8px;
+      padding: 3px 10px;
+      font-size: 0.92rem;
       font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
     }
 
-    .hymn-link::after {
-      content: " ↗";
-      font-size: 0.78em;
-      color: var(--accent);
+    .hymn-btn:active {
+      background: var(--primary);
+      color: #fff;
     }
 
     /* Pastoral Letter */
@@ -454,6 +458,107 @@
       font-weight: 600;
       text-decoration: none;
     }
+
+    /* Hymn Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(15, 23, 38, 0.72);
+      padding: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-sheet {
+      width: 100%;
+      max-width: 560px;
+      max-height: 90vh;
+      background: #fff;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .modal-header h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .modal-close {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      padding: 18px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .score-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .lyrics-verse {
+      margin-bottom: 14px;
+      font-size: 1.04rem;
+      line-height: 1.75;
+      color: var(--text);
+      word-break: keep-all;
+    }
+
+    .lyrics-verse strong {
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    .modal-footer {
+      padding: 12px 18px;
+      border-top: 1px solid var(--border);
+      background: #faf9f6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .ext-score-link {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 7px 12px;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -505,7 +610,7 @@
         </li>
         <li class="order-item">
           <span class="order-label stand">찬송</span>
-          <span class="order-detail"><a class="hymn-link" href="https://risen.runean.com/entry/%EC%B0%AC%EC%86%A1%EA%B0%80-27%EC%9E%A5-%EB%B9%9B%EB%82%98%EA%B3%A0-%EB%86%92%EC%9D%80-%EB%B3%B4%EC%A2%8C%EC%99%80-%EA%B0%80%EC%82%AC%EC%95%85%EB%B3%B4NWC" target="_blank" rel="noopener">찬송 27장</a></span>
+          <span class="order-detail"><button type="button" class="hymn-btn" onclick="openHymn(27)">찬송 27장</button></span>
           <span class="order-who">다 같이</span>
         </li>
         <li class="order-item">
@@ -520,7 +625,7 @@
         </li>
         <li class="order-item">
           <span class="order-label">찬송</span>
-          <span class="order-detail"><a class="hymn-link" href="https://ccm4u.tistory.com/entry/%EC%83%88%EC%B0%AC%EC%86%A1%EA%B0%80-190%EC%9E%A5-%EC%84%B1%EB%A0%B9%EC%9D%B4%EC%97%AC-%EA%B0%95%EB%A6%BC%ED%95%98%EC%82%AC-%EC%84%B1%EB%A0%B9%EA%B0%95%EB%A6%BC-G%EC%BD%94%EB%93%9C-%EC%95%85%EB%B3%B4-%EC%9D%B4%EB%AF%B8%EC%A7%80%C2%B7%EA%B0%80%EC%82%AC" target="_blank" rel="noopener">찬송 190장</a></span>
+          <span class="order-detail"><button type="button" class="hymn-btn" onclick="openHymn(190)">찬송 190장</button></span>
           <span class="order-who">다 같이</span>
         </li>
         <li class="order-item">
@@ -550,7 +655,7 @@
         </li>
         <li class="order-item">
           <span class="order-label">찬송</span>
-          <span class="order-detail"><a class="hymn-link" href="https://yoolessonge.tistory.com/entry/%EC%83%88%EC%B0%AC%EC%86%A1%EA%B0%80-503%EC%9E%A5-%ED%86%B5373%EC%9E%A5-%EC%84%B8%EC%83%81-%EB%AA%A8%EB%91%90-%EC%82%AC%EB%9E%91-%EC%97%86%EC%96%B4-%EC%B0%AC%EC%86%A1%EA%B0%80-%EC%95%85%EB%B3%B4-%EA%B0%80%EC%82%AC-ppt" target="_blank" rel="noopener">찬송 503장</a></span>
+          <span class="order-detail"><button type="button" class="hymn-btn" onclick="openHymn(503)">찬송 503장</button></span>
           <span class="order-who">다 같이</span>
         </li>
         <li class="order-item">
@@ -816,7 +921,95 @@
     기독교대한성결교회 한샘교회 · <a href="https://hansaemchurch.org" target="_blank" rel="noopener">hansaemchurch.org</a>
   </footer>
 
+  <!-- Hymn Modal -->
+  <div id="hymnModal" class="modal-backdrop" onclick="if(event.target===this) closeHymn()">
+    <div class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <h2 id="modalTitle">새찬송가</h2>
+        <button type="button" class="modal-close" onclick="closeHymn()">닫기</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+      <div class="modal-footer">
+        <span id="modalNote" style="color:var(--muted);">새찬송가</span>
+        <a id="modalExtLink" class="ext-score-link" href="#" target="_blank" rel="noopener">악보 페이지 ↗</a>
+      </div>
+    </div>
+  </div>
+
   <script>
+    const HYMN_DATA = {
+      27: {
+        title: "새찬송가 27장 · 빛나고 높은 보좌와",
+        driveId: "",
+        extUrl: "https://risen.runean.com/entry/%EC%B0%AC%EC%86%A1%EA%B0%80-27%EC%9E%A5-%EB%B9%9B%EB%82%98%EA%B3%A0-%EB%86%92%EC%9D%80-%EB%B3%B4%EC%A2%8C%EC%99%80-%EA%B0%80%EC%82%AC%EC%95%85%EB%B3%B4NWC",
+        verses: [
+          "1절) 빛나고 높은 보좌와 그 위에 앉으신 주 예수 얼굴 영광이 해 같이 빛나네 해 같이 빛나네",
+          "2절) 지극히 높은 위엄과 한없는 자비를 뭇 천사 소리 합하여 늘 찬송 드리네 늘 찬송 드리네",
+          "3절) 영 죽을 나를 살리려 그 영광 떠나서 그 부끄러운 십자가 날 위해 지셨네 날 위해 지셨네",
+          "4절) 나 이제 생명 있음은 주님의 은혜요 저 사망 권세 이기니 큰 기쁨 넘치네 큰 기쁨 넘치네",
+          "5절) 주님의 보좌 있는데 천한 몸 이르러 그 영광 몸소 뵈올 때 내 기쁨 넘치리 내 기쁨 넘치리 아멘"
+        ]
+      },
+      190: {
+        title: "새찬송가 190장 · 성령이여 강림하사",
+        driveId: "",
+        extUrl: "https://ccm4u.tistory.com/entry/%EC%83%88%EC%B0%AC%EC%86%A1%EA%B0%80-190%EC%9E%A5-%EC%84%B1%EB%A0%B9%EC%9D%B4%EC%97%AC-%EA%B0%95%EB%A6%BC%ED%95%98%EC%82%AC-%EC%84%B1%EB%A0%B9%EA%B0%95%EB%A6%BC-G%EC%BD%94%EB%93%9C-%EC%95%85%EB%B3%B4-%EC%9D%B4%EB%AF%B8%EC%A7%80%C2%B7%EA%B0%80%EC%82%AC",
+        verses: [
+          "1절) 성령이여 강림하사 나를 감화하시고 애통하며 회개할 맘 충만하게 하소서",
+          "후렴) 예수여 비오니 나의 기도 들으사 애통하며 회개한 맘 충만하게 하소서",
+          "2절) 성령이여 강림하사 크신 권능 주소서 원하옵고 원하오니 충만하게 하소서 (후렴)",
+          "3절) 힘이 없고 연약하나 엎드려서 비오니 성령 강림 하옵소서 충만하게 하소서 (후렴)",
+          "4절) 정케 하고 위로하사 복을 받게 하소서 충만하게 하시오니 무한 감사합니다 (후렴)"
+        ]
+      },
+      503: {
+        title: "새찬송가 503장 · 세상 모두 사랑 없어",
+        driveId: "",
+        extUrl: "https://yoolessonge.tistory.com/entry/%EC%83%88%EC%B0%AC%EC%86%A1%EA%B0%80-503%EC%9E%A5-%ED%86%B5373%EC%9E%A5-%EC%84%B8%EC%83%81-%EB%AA%A8%EB%91%90-%EC%82%AC%EB%9E%91-%EC%97%86%EC%96%B4-%EC%B0%AC%EC%86%A1%EA%B0%80-%EC%95%85%EB%B3%B4-%EA%B0%80%EC%82%AC-ppt",
+        verses: [
+          "1절) 세상 모두 사랑 없어 냉랭함을 아느냐 곳곳마다 사랑 없어 탄식 소리뿐일세 악을 선케 만들고 모든 소망 이루는 사랑 얻기 위하여 저들 오래 참았네 사랑 없는 까닭에 사랑 없는 까닭에 사랑 얻기 위하여 저들 오래 참았네",
+          "2절) 곳곳마다 번민함은 사랑 없는 연고요 측은하게 손을 펴고 사랑받기 원하네 어떤 이는 고통과 근심 걱정 많으니 사랑 없는 까닭에 저들 실망하도다 사랑 없는 까닭에 사랑 없는 까닭에 사랑 없는 까닭에 저들 실망하도다",
+          "3절) 어떤 사람 우상 앞에 복을 빌고 있으며 어떤 사람 자연 앞에 사랑 요구하도다 먼저 믿는 사람들 예수 사랑 가지고 나타내지 않으면 저들 실망하겠네 예수 사랑 가지고 예수 사랑 가지고 나타내지 않으면 저들 실망하겠네",
+          "4절) 기갈 중에 있는 영혼 사랑받기 원하며 아이들도 소리 질러 사랑받기 원하네 저들 소리 들을 때 가서 도와줍시다 만민 중에 나가서 예수 사랑 전하세 예수 사랑 전하세 예수 사랑 전하세 만민 중에 나가서 예수 사랑 전하세"
+        ]
+      }
+    };
+
+    function openHymn(num) {
+      const h = HYMN_DATA[num];
+      if (!h) return;
+      document.getElementById("modalTitle").textContent = h.title;
+      const body = document.getElementById("modalBody");
+      const note = document.getElementById("modalNote");
+      const ext = document.getElementById("modalExtLink");
+
+      if (h.driveId) {
+        body.innerHTML = `<img class="score-img" src="https://drive.google.com/thumbnail?id=${h.driveId}&sz=w1600" alt="${h.title} 악보" />`;
+        note.textContent = "구글 드라이브 악보";
+        ext.href = `https://drive.google.com/file/d/${h.driveId}/view?usp=sharing`;
+        ext.textContent = "원본 크게 보기 ↗";
+      } else {
+        body.innerHTML = h.verses.map(v => {
+          const idx = v.indexOf(") ");
+          if (idx > -1) {
+            return `<div class="lyrics-verse"><strong>${v.slice(0, idx + 1)}</strong>${v.slice(idx + 2)}</div>`;
+          }
+          return `<div class="lyrics-verse">${v}</div>`;
+        }).join("");
+        note.textContent = "큰 글씨 가사";
+        ext.href = h.extUrl;
+        ext.textContent = "악보 페이지 보기 ↗";
+      }
+
+      document.getElementById("hymnModal").classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeHymn() {
+      document.getElementById("hymnModal").classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
     function copyAcct() {
       const text = "276-072015-04-025";
       navigator.clipboard.writeText(text).then(() => {
