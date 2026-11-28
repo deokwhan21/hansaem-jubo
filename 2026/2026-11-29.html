@@ -397,7 +397,7 @@
       background: var(--primary-light);
       padding: 12px 14px;
       border-radius: 10px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .account-info {
@@ -426,24 +426,207 @@
       opacity: 0.85;
     }
 
-    /* Info Grid */
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      font-size: 0.88rem;
-    }
-
-    .info-box {
-      background: #f9f8f4;
+    /* Mobile Volunteer Cards */
+    .duty-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--accent-soft);
+      border: 1px solid #eadcc6;
       border-radius: 10px;
-      padding: 12px;
+      padding: 9px 12px;
+      font-size: 0.88rem;
+      margin-bottom: 12px;
     }
 
-    .info-box h3 {
-      font-size: 0.9rem;
+    .duty-banner strong {
+      color: #6b4719;
+    }
+
+    .duty-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .duty-card {
+      background: #faf9f6;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .duty-card.special {
+      background: var(--accent-soft);
+      border-color: #e2cfa9;
+    }
+
+    .duty-date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
       color: var(--primary);
-      margin-bottom: 6px;
+    }
+
+    .duty-tag {
+      font-size: 0.76rem;
+      font-weight: 600;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    .duty-card.special .duty-tag {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .duty-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+    }
+
+    .role-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.86rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 4px 9px;
+    }
+
+    .role-pill span {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* Mobile Worship Info & Staff */
+    .info-section-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 14px 0 8px;
+    }
+
+    .info-section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    .schedule-list {
+      background: #faf9f6;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .schedule-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-bottom: 1px dashed #e6e1d6;
+      font-size: 0.92rem;
+    }
+
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .schedule-time {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .staff-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .staff-chip {
+      flex: 1 1 140px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #faf9f6;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+
+    .staff-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .staff-role {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .staff-name {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .location-card {
+      background: #faf9f6;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.89rem;
+      line-height: 1.65;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .action-btn {
+      flex: 1 1 120px;
+      text-align: center;
+      text-decoration: none;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .action-btn.secondary {
+      background: var(--primary-light);
+      color: var(--primary);
     }
 
     .footer {
@@ -818,7 +1001,7 @@
       </div>
     </section>
 
-    <!-- 5. 예배와 봉사위원 & 향기로운 예물 -->
+    <!-- 5. 향기로운 예물 & 모바일 봉사위원 카드 -->
     <section id="offering" class="card">
       <div class="card-title">
         <span>향기로운 예물 · 봉사위원</span>
@@ -833,84 +1016,136 @@
         <button class="copy-btn" onclick="copyAcct()">계좌복사</button>
       </div>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>날짜</th>
-              <th>주일예배 기도</th>
-              <th>헌금위원</th>
-              <th>애찬제공</th>
-              <th>식사봉사</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>6일</td>
-              <td>이원훈 안수집사</td>
-              <td rowspan="5" style="vertical-align: middle; text-align: center;">교회학교</td>
-              <td>김기영</td>
-              <td>소사/역곡</td>
-            </tr>
-            <tr>
-              <td>13일</td>
-              <td>최용찬 안수집사</td>
-              <td>명준호/이지은</td>
-              <td>송내/원미</td>
-            </tr>
-            <tr>
-              <td>20일</td>
-              <td>이형 집사</td>
-              <td>장옥자</td>
-              <td>옥길/범박</td>
-            </tr>
-            <tr>
-              <td>25일</td>
-              <td>박양호 장로</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>27일</td>
-              <td>이지은 집사</td>
-              <td>이용연/전제순</td>
-              <td>시흥/괴안</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="duty-banner">
+        <span>12월 헌금위원</span>
+        <strong>교회학교</strong>
+      </div>
+
+      <div class="duty-list">
+        <div class="duty-card">
+          <div class="duty-date">
+            <span>12월 6일 (주일)</span>
+            <span class="duty-tag">첫째 주</span>
+          </div>
+          <div class="duty-roles">
+            <div class="role-pill"><span>기도</span> 이원훈 안수집사</div>
+            <div class="role-pill"><span>애찬</span> 김기영</div>
+            <div class="role-pill"><span>식사봉사</span> 소사/역곡</div>
+          </div>
+        </div>
+
+        <div class="duty-card">
+          <div class="duty-date">
+            <span>12월 13일 (주일)</span>
+            <span class="duty-tag">둘째 주</span>
+          </div>
+          <div class="duty-roles">
+            <div class="role-pill"><span>기도</span> 최용찬 안수집사</div>
+            <div class="role-pill"><span>애찬</span> 명준호/이지은</div>
+            <div class="role-pill"><span>식사봉사</span> 송내/원미</div>
+          </div>
+        </div>
+
+        <div class="duty-card">
+          <div class="duty-date">
+            <span>12월 20일 (주일)</span>
+            <span class="duty-tag">셋째 주</span>
+          </div>
+          <div class="duty-roles">
+            <div class="role-pill"><span>기도</span> 이형 집사</div>
+            <div class="role-pill"><span>애찬</span> 장옥자</div>
+            <div class="role-pill"><span>식사봉사</span> 옥길/범박</div>
+          </div>
+        </div>
+
+        <div class="duty-card special">
+          <div class="duty-date">
+            <span>12월 25일 (금)</span>
+            <span class="duty-tag">성탄감사예배</span>
+          </div>
+          <div class="duty-roles">
+            <div class="role-pill"><span>기도</span> 박양호 장로</div>
+          </div>
+        </div>
+
+        <div class="duty-card">
+          <div class="duty-date">
+            <span>12월 27일 (주일)</span>
+            <span class="duty-tag">넷째 주</span>
+          </div>
+          <div class="duty-roles">
+            <div class="role-pill"><span>기도</span> 이지은 집사</div>
+            <div class="role-pill"><span>애찬</span> 이용연/전제순</div>
+            <div class="role-pill"><span>식사봉사</span> 시흥/괴안</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 6. 예배안내 및 교회소개 -->
+    <!-- 6. 모바일 예배안내 · 섬기는 이들 · 오시는 길 -->
     <section id="info" class="card">
       <div class="card-title">
         <span>예배안내 · 섬기는 이들</span>
       </div>
-      <div class="info-grid">
-        <div class="info-box">
-          <h3>주일 예배</h3>
-          주일예배 오전 11:00<br />
-          교회학교 오전 11:00<br />
-          청년회 오후 1:00<br />
-          어와나 오후 1:00
+
+      <div class="info-section-title">예배 시간 안내</div>
+      <div class="schedule-list">
+        <div class="schedule-row">
+          <span class="schedule-name">주일예배 · 교회학교</span>
+          <span class="schedule-time">주일 오전 11:00</span>
         </div>
-        <div class="info-box">
-          <h3>주중 예배</h3>
-          수요예배 오후 7:30<br />
-          금요기도회 오후 8:30<br />
-          새벽기도회(월~금) 오전 6:00
+        <div class="schedule-row">
+          <span class="schedule-name">청년회 · 어와나</span>
+          <span class="schedule-time">주일 오후 1:00</span>
         </div>
-        <div class="info-box">
-          <h3>섬기는 이들</h3>
-          담임목사: 오덕환<br />
-          장로: 박양호(시무)<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이용연(명예)
+        <div class="schedule-row">
+          <span class="schedule-name">수요예배</span>
+          <span class="schedule-time">수요일 오후 7:30</span>
         </div>
-        <div class="info-box">
-          <h3>오시는 길</h3>
-          경기 부천시 양지로 40번길 17, 4층<br />
-          버스: 범박휴먼시아 1단지 정문 (25, 57-1, 60)<br />
-          ☎ 032-347-0501
+        <div class="schedule-row">
+          <span class="schedule-name">금요기도회</span>
+          <span class="schedule-time">금요일 오후 8:30</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-name">새벽기도회</span>
+          <span class="schedule-time">월~금 오전 6:00</span>
+        </div>
+      </div>
+
+      <div class="info-section-title">섬기는 이들</div>
+      <div class="staff-chips">
+        <div class="staff-chip">
+          <div class="staff-avatar">오</div>
+          <div>
+            <div class="staff-role">담임목사</div>
+            <div class="staff-name">오덕환</div>
+          </div>
+        </div>
+        <div class="staff-chip">
+          <div class="staff-avatar">박</div>
+          <div>
+            <div class="staff-role">시무장로</div>
+            <div class="staff-name">박양호</div>
+          </div>
+        </div>
+        <div class="staff-chip">
+          <div class="staff-avatar">이</div>
+          <div>
+            <div class="staff-role">명예장로</div>
+            <div class="staff-name">이용연</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-section-title">오시는 길 · 문의</div>
+      <div class="location-card">
+        <div><strong>주소:</strong> 경기 부천시 양지로 40번길 17, 4층</div>
+        <div><strong>버스:</strong> 범박휴먼시아 1단지 정문 (25, 57-1, 60)</div>
+        <div><strong>전화:</strong> 032-347-0501</div>
+        <div class="action-row">
+          <a class="action-btn" href="tel:032-347-0501">전화 걸기</a>
+          <button type="button" class="action-btn secondary" id="addrCopyBtn" onclick="copyAddr()">주소 복사</button>
+          <a class="action-btn secondary" href="https://hansaemchurch.org" target="_blank" rel="noopener">홈페이지</a>
         </div>
       </div>
     </section>
@@ -1016,6 +1251,15 @@
         const btn = document.querySelector(".copy-btn");
         btn.textContent = "복사됨!";
         setTimeout(() => (btn.textContent = "계좌복사"), 1800);
+      });
+    }
+
+    function copyAddr() {
+      const text = "경기 부천시 양지로 40번길 17";
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById("addrCopyBtn");
+        btn.textContent = "복사됨!";
+        setTimeout(() => (btn.textContent = "주소 복사"), 1800);
       });
     }
   </script>
